@@ -20,6 +20,10 @@ inputs:
     description: Whether the variable should be treated by Terraform as sensitive
     required: false
     default: false
+  hcl:
+    description: True if the value should be parsed as hcl
+    required: false
+    default: false
   value:
     description: The variable's initial value
     required: false
@@ -43,6 +47,8 @@ runs:
     - ${{ inputs.value }}
     - -category
     - ${{ inputs.category }}
+    - -hcl
+    - ${{ inputs.hcl }}
     - -sensitive=${{ inputs.sensitive }}
 branding:
   icon: arrow-up-right

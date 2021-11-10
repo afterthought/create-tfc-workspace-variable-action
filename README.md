@@ -14,6 +14,7 @@ The action expects the following inputs:
 | `variableName`  | Yes      | The name of the variable.                                                             |
 | `category`      | Yes      | The type of variable to create. Options include `terraform` and `env`.                |
 | `sensitive`     | No       | Whether the variable should be treated by Terraform as sensitive. Default to `false`. |
+| `hcl`           | No       | `true` if the value should be parsed as hcl. Default to `false`.                      |
 | `value`         | No       | The variable's initial value. Defaults to an empty string.                            |
 
 ## Outputs
